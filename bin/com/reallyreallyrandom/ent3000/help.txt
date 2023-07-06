@@ -11,13 +11,18 @@
 
     A new randomness testing suite for TRNG Makers generating in
     the sub 1 MB space.  Successor to John Walker’s venerable `ent`.
-        Call as:  java -jar ent3000.jar [options] [input-file]
+        Call as:  java -jar ent3000xxx.jar [options] [input-file] [output-file]
 
         Options:     --help   Print this message.
+                     -j       Output json.
         input-file:           The file of binary samples to be tested.  
                               If no input file is supplied, an internal 
                               native CSPRNG will be tested.
+        output-file:          The output json file the results will be
+                              written to. Only needs to be provided when
+                              using the -j option.
 
+This is a fork of ent3000 that supports writing the output to a JSON file.
 
 ent3000 will only test binary file sizes of 25 kB, 50 kB, 75 kB, 100 kB, 
 150 kB, 200 kB, 300 kB, 400 kB, 500 kB, 600 kB, 700 kB, 800 kB, 900 kB 
